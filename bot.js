@@ -34,24 +34,6 @@ bot.on("messageCreate", (message) => {
     }
     message.channel.send(`<@${personas[numeroAleatorio]}> Che pa tenes que contar numerito, te la hago corta, el siguiente es **${parseInt(message.content) + 1}**`);
     lastNumber =+ message.content
-
-    
-
-    // message.channel.send((parseInt(message.content)+1).toString())
-
 })
 
-
-
-// bot.on("messageCreate", (message) => {
-
-//     message.channel.send((parseInt(message.content)+1).toString())
-
-// })
-
-
-
-  
-
-
-bot.login('MTA3MTU4ODQ2ODkwNTQ3NjIyNg.GKDGp7.HYAy6LyCAckzJhHqfWA2Ebn9ISrc2VZdeQQYBo');
+bot.login(process.env.TOKEN);
