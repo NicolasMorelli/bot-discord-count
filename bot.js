@@ -1,15 +1,13 @@
+const dotenv = require("dotenv")
 const { Client, IntentsBitField, GatewayIntentBits } = require('discord.js');
-const { measureMemory } = require('vm');
 const myIntents = new IntentsBitField();
 myIntents.add(IntentsBitField.Flags.GuildPresences,IntentsBitField.Flags.GuildMessages, IntentsBitField.Flags.GuildMembers,GatewayIntentBits.Guilds,GatewayIntentBits.MessageContent,GatewayIntentBits.GuildIntegrations);
-
+dotenv.config();
 const bot = new Client({ intents: myIntents});
-
 
 bot.on('ready', () => {
     console.log(`Logged in as ${bot.user.tag}!`)
     let canal = bot.channels.fetch("943283709510033448")
-    console.log(canal);
 });
 let personas = ["322798185204416512", "553613528800559116", "747956165236883597", "748004656684466176", "457692823488167936", "662061215161385012", "758324176091742260", "380167946753802251"];
 let lastNumber;
