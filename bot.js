@@ -18,11 +18,8 @@ bot.on("messageCreate", (message) => {
 
     if (lastNumber && lastNumber + 1 !== + message.content) {
         lastNumber = undefined;
-        message.channel.send("PONE BIEN EL NUMERO LA CONCHA DE TU MADRE, TE VAS BANEADO POR PELOTUDO")
-        message.channel.send("PONE BIEN EL NUMERO LA CONCHA DE TU MADRE, TE VAS BANEADO POR PELOTUDO")
-        message.channel.send("PONE BIEN EL NUMERO LA CONCHA DE TU MADRE, TE VAS BANEADO POR PELOTUDO")
-        message.channel.send("PONE BIEN EL NUMERO LA CONCHA DE TU MADRE, TE VAS BANEADO POR PELOTUDO")
-        return message.channel.send("PONE BIEN EL NUMERO LA CONCHA DE TU MADRE, TE VAS BANEADO POR PELOTUDO")
+        message.channel.send("PONE BIEN EL NUMERO, TE VAS BANEADO")
+        return message.channel.send("PONE BIEN EL NUMERO, TE VAS BANEADO")
     }
 
     if (message.author.bot === true) return;
@@ -30,7 +27,7 @@ bot.on("messageCreate", (message) => {
     while (personas[numeroAleatorio] === message.author.id) {
         numeroAleatorio = Math.floor(Math.random() * personas.length);
     }
-    message.channel.send(`<@${personas[numeroAleatorio]}> Che pa tenes que contar numerito, te la hago corta, el siguiente es **${parseInt(message.content) + 1}**`);
+    message.channel.send(`<@${personas[numeroAleatorio]}> Che pa tenes que contar numerito, el siguiente es **${parseInt(message.content) + 1}**`);
     lastNumber =+ message.content
 })
 
